@@ -21,7 +21,7 @@ public class CoffeeController {
 
     @GetMapping("/{id}")
     Coffee findCoffeeById(@PathVariable Long id) {
-        return coffeeRepository.findOne(id);
+        return coffeeRepository.findById(id).get();
     }
 
     @GetMapping("/random")
